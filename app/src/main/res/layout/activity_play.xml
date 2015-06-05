@@ -1,0 +1,142 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#0099cc"
+    tools:context="com.example.ashaikh1.papercricket.PlayActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:keepScreenOn="true" android:textColor="#33b5e5"
+        android:textStyle="bold" android:textSize="50sp" android:gravity="center" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <ImageButton
+            android:layout_width="158dp"
+            android:layout_height="132dp"
+            android:id="@+id/imageSwing"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="60dp"
+            android:onClick="swingBat" />
+
+        <TextView
+            android:layout_width="179dp"
+            android:layout_height="64dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="PLAYER 1"
+            android:id="@+id/textPlayerName"
+            android:layout_gravity="center_horizontal|top"
+            android:textColor="#fa030206"
+            android:textSize="40dp"
+            android:autoText="false"
+            android:editable="false" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="235dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:id="@+id/scoreLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="100"
+                android:id="@+id/textRuns"
+                android:textSize="70dp" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="/"
+                android:id="@+id/textSlash"
+                android:textSize="80dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="10"
+                android:id="@+id/textWickets"
+                android:textSize="60dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="108dp"
+            android:layout_height="50dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Target"
+            android:id="@+id/labelTarget"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="100dp"
+            android:editable="true"
+            android:layout_marginRight="100dp"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="200"
+            android:id="@+id/textTarget"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="100dp"
+            android:editable="true"
+            android:layout_marginRight="30dp"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="BallsLeft"
+            android:id="@+id/labelBalls"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="150dp" />
+
+        <TextView
+            android:layout_width="99dp"
+            android:layout_height="50dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="10"
+            android:id="@+id/textBalls"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="100dp"
+            android:editable="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="New Game"
+                android:id="@+id/newGameButton"
+                android:layout_weight="1.01"
+                android:onClick="goToSettingsScreen" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:text="Exit"
+                android:id="@+id/exitButton"
+                android:layout_weight="0.09"
+                android:onClick="exit" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
