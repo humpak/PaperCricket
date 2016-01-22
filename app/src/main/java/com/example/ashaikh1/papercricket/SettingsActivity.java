@@ -56,7 +56,9 @@ public class SettingsActivity extends ActionBarActivity {
         finish();
         Intent intent = new Intent(this,PlayActivity.class);
         startActivity(intent);
-
     }
+
+
+
 
 }
